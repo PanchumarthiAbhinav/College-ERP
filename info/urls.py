@@ -57,6 +57,8 @@ urlpatterns = [
     path('api/auth/', include('djoser.urls')),
     path('add-teacher/', views.add_teacher, name='add_teacher'),
     path('add-student/', views.add_student, name='add_student'),
+    path('average-marks-percentage/<int:subject_id>/',
+         views.average_marks_percentage, name='average_marks_percentage'),
 ]
 admin.site.site_url = None
 admin.site.site_header = 'My Site'
